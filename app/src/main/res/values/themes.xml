@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.WompNotes" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryVariant</item>
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="backgroundColor">@color/backgroundColor</item>
+        <item name="colorSurface">@color/surfaceColor</item>
+        <item name="colorOnPrimary">@color/onPrimary</item>
+        <item name="colorOnSecondary">@color/onSecondary</item>
+        <item name="colorOnBackground">@color/onBackground</item>
+    </style>
+
+    <style name="DarkTheme.WompNotes" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/primaryColorDark</item>
+        <item name="backgroundColor">@color/backgroundColorDark</item>
+        <item name="colorSurface">@color/surfaceColorDark</item>
+        <item name="colorOnBackground">@color/onBackgroundDark</item>
+    </style>
+
+    <style name="CalendarTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/calendarTextColor</item>
+    </style>
+
+    <style name="CalendarTextAppearanceDark" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/calendarTextColorDark</item>
+    </style>
+</resources>

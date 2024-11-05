@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores principales para el tema claro -->
+    <color name="primaryColor">#6200EE</color>
+    <color name="primaryVariant">#3700B3</color>
+    <color name="secondaryColor">#03DAC5</color>
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="surfaceColor">#F2F2F2</color>
+    <color name="onPrimary">#FFFFFF</color>
+    <color name="onSecondary">#000000</color>
+    <color name="onBackground">#000000</color>
+    <color name="calendarBackground">#FFFFFF</color>
+    <color name="calendarTextColor">#000000</color>
+
+    <!-- Colores adicionales para el tema oscuro -->
+    <color name="primaryColorDark">#BB86FC</color>
+    <color name="backgroundColorDark">#121212</color>
+    <color name="surfaceColorDark">#333333</color>
+    <color name="onBackgroundDark">#FFFFFF</color>
+    <color name="calendarBackgroundDark">#333333</color>
+    <color name="calendarTextColorDark">#FFFFFF</color>
+</resources>

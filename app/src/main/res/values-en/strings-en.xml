@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">WompNotes</string>
+    <string name="mis_listas">My List</string>
+    <string name="notas">Notes</string>
+    <string name="tareas">Tasks</string>
+    <string name="agregar_nueva">Add New</string>
+    <string name="recordar">Remember</string>
+    <string name="hora">Hour</string>
+    <string name="fecha_y_hora">Date</string>
+    <string name="nota">Note</string>
+    <string name="tarea">Task</string>
+    <string name="descripci_n">Description</string>
+    <string name="t_tulo">Title</string>
+    <string name="agregar">Add</string>
+    <string name="guardar">Save</string>
+    <string name="nueva_nota">New</string>
+    <string name="editar_nota">Edit</string>
+    <string name="el_t_tulo_es_obligatorio">the títle is required</string>
+    <string name="cancelar">Cancel</string>
+    <string name="selecciona_un_tipo">Select type</string>
+    <string name="la_fecha_y_la_hora_son_obligatorias_para_tareas">The date is required for tasks</string>
+    <string name="confirmaci_n_de_eliminaci_n">Confirm elimination</string>
+    <string name="est_s_seguro_de_que_deseas_eliminar">Are you sure about that?</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="seleccionar_tipo">Select type</string>
+</resources>
