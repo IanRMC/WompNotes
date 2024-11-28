@@ -5,32 +5,32 @@ import kotlinx.coroutines.flow.Flow
 
 class NoteTaskRepository(private val noteTaskDao: NoteTaskDao) {
 
-    // Obtener todas las notas
+    // Inserta una nueva nota o tarea y devuelve el ID generado
+    suspend fun insertNoteTask(noteTask: NoteTask): Long {
+        return noteTaskDao.insertNoteTask(noteTask) // Devuelve el ID generado
+    }
+
+    // Actualiza una nota o tarea existente
+    suspend fun updateNoteTask(noteTask: NoteTask) {
+        noteTaskDao.update(noteTask) // No devuelve nada
+    }
+
+    // Obtiene todas las notas
     suspend fun getAllNotes(): List<NoteTask> {
         return noteTaskDao.getAllNotes()
     }
 
-    // Obtener todas las tareas
+    // Obtiene todas las tareas
     suspend fun getAllTasks(): List<NoteTask> {
         return noteTaskDao.getAllTasks()
     }
 
-    // Insertar una nueva nota o tarea
-    suspend fun insertNoteTask(noteTask: NoteTask) {
-        noteTaskDao.insert(noteTask)
-    }
-
-    // Actualizar una nota o tarea existente
-    suspend fun updateNoteTask(noteTask: NoteTask) {
-        noteTaskDao.update(noteTask)
-    }
-
-    // Eliminar una nota o tarea
+    // Elimina una nota o tarea
     suspend fun deleteNoteTask(noteTask: NoteTask) {
         noteTaskDao.delete(noteTask)
     }
 
-    // Obtener una nota o tarea por su ID
+    // Obtiene una nota o tarea por su ID
     suspend fun getNoteById(id: Int): NoteTask? {
         return noteTaskDao.getNoteById(id)
     }

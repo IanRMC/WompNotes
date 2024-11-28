@@ -11,3 +11,10 @@ data class NoteTask(
     val date: String? = null,
     val type: String  // Valor predeterminado como "Nota" para evitar nulos
 )
+
+@Entity(tableName = "media_files")
+data class MediaFile(
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    val noteId: Int,  // Clave foránea
+    val filePath: String
+)

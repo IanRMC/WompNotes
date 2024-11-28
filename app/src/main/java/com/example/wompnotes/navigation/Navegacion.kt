@@ -19,7 +19,7 @@ import com.example.wompnotes.R
 import com.example.wompnotes.ViewModel.NoteTaskViewModel
 import com.example.wompnotes.ViewModel.ViewModelFactory
 import com.example.wompnotes.data.NoteTaskRepository
-import com.example.wompnotes.ui.screens.PantallaAgregar
+import com.example.wompnotes.ui.screens.AgregarNotaTarea
 import com.example.wompnotes.ui.screens.Principal
 import com.example.wompnotes.ui.screens.VerPantalla
 import com.example.wompnotes.ui.screens.ListaNotaTarea
@@ -52,7 +52,7 @@ fun MyApp(noteTaskRepository: NoteTaskRepository) {
             ) { backStackEntry ->
                 val noteId = backStackEntry.arguments?.getInt("noteId") ?: -1
                 val type = backStackEntry.arguments?.getString("type") ?: ""
-                PantallaAgregar(
+                AgregarNotaTarea(
                     navController = navController,
                     noteId = noteId,
                     initialType = type,

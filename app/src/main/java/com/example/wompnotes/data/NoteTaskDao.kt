@@ -3,13 +3,14 @@ package com.example.wompnotes.data
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 
 @Dao
 interface NoteTaskDao {
-    @Insert
-    suspend fun insert(noteTask: NoteTask)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertNoteTask(noteTask: NoteTask): Long
 
     @Query("SELECT * FROM notes_tasks WHERE id = :id")
     suspend fun getNoteById(id: Int): NoteTask?

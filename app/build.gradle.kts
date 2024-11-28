@@ -61,10 +61,17 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
 
+    implementation ("io.coil-kt:coil-compose:2.2.2")
+
+    implementation ("com.google.android.exoplayer:exoplayer:2.19.0")
+
     implementation ("com.google.android.material:material:1.8.0")
 
     // Dependencia para la navegación en Jetpack Compose
     implementation("androidx.navigation:navigation-compose:2.8.3") // para cambiar pantallas
+
+    implementation ("com.google.android.exoplayer:exoplayer:2.15.1")
+
 
 
     // Dependencias de Compose BOM y Material3

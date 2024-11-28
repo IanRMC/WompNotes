@@ -66,15 +66,6 @@ fun Principal(navController: NavController) {
             icon = Icons.Default.Menu,
             onClick = { navController.navigate("notesTasksScreen/Tareas") }
         )
-
-        Spacer(modifier = Modifier.weight(1f))
-
-        // Botón Agregar nueva
-        SimpleListCard(
-            title = stringResource(R.string.agregar_nueva),
-            icon = Icons.Default.Add,
-            onClick = { navController.navigate("secondScreen") }  // Navegar sin especificar tipo
-        )
     }
 }
 
@@ -109,84 +100,3 @@ fun SimpleListCard(
     }
 }
 
-// Función original para las listas con ítems
-@Composable
-fun ListCard(
-    title: String,
-    icon: ImageVector,
-    items: List<String>,
-    onItemClick: ((String) -> Unit)? = null
-) {
-    var expanded by remember { mutableStateOf(false) }
-
-    Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 4.dp)
-            .clickable { expanded = !expanded },
-        elevation = CardDefaults.cardElevation(4.dp)
-    ) {
-        Column {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(16.dp),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Icon(imageVector = icon, contentDescription = title)
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text(title)
-                }
-                if (items.isNotEmpty()) {
-                    Icon(Icons.Default.ArrowDropDown, contentDescription = "Desplegar")
-                }
-            }
-            if (expanded && items.isNotEmpty()) {
-                Column {
-                    items.forEach { item ->
-                        Text(
-                            text = item,
-                            modifier = Modifier
-                                .padding(8.dp)
-                                .clickable { onItemClick?.invoke(item) }
-                        )
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-@Composable
-fun StatusCard(title: String, count: Int, modifier: Modifier = Modifier, icon: ImageVector) {
-    Card(
-        modifier = modifier.height(120.dp),
-        elevation = CardDefaults.cardElevation(4.dp)
-    ) {
-        Column(
-            modifier = Modifier.padding(16.dp),
-            verticalArrangement = Arrangement.SpaceBetween
-        ) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Icon(
-                    imageVector = icon,
-                    contentDescription = title,
-                    modifier = Modifier.size(32.dp)
-                )
-                Text(text = "$count", style = MaterialTheme.typography.headlineMedium)
-            }
-            Text(
-                text = title,
-                style = MaterialTheme.typography.titleMedium,
-                modifier = Modifier.align(Alignment.Start)
-            )
-        }
-    }
-}

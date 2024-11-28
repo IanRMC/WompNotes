@@ -5,9 +5,10 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [NoteTask::class], version = 3) // Incrementa la versión a 3
+@Database(entities = [NoteTask::class, MediaFile::class], version = 5) // Incrementa la versión
 abstract class NoteTaskDatabase : RoomDatabase() {
     abstract fun noteTaskDao(): NoteTaskDao
+    abstract fun mediaFileDao(): MediaFileDao
 
     companion object {
         @Volatile
@@ -20,7 +21,7 @@ abstract class NoteTaskDatabase : RoomDatabase() {
                     NoteTaskDatabase::class.java,
                     "note_task_database"
                 )
-                    .fallbackToDestructiveMigration() // Este método elimina y recrea la base de datos en caso de cambio de versión
+                    .fallbackToDestructiveMigration() // Destruye y recrea la base de datos en caso de cambios
                     .build()
                 INSTANCE = instance
                 instance
